@@ -16,13 +16,24 @@
     <h5>Front 블로그</h5>
     <p>- Make Vue -</p>
   </div>
+
+  <ListVue :blogPost="blog"/>
+
 </template>
 
 <script>
+import ListVue from './components/ListVue.vue'
+import blogWrite from './assets/blogWrite'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      blog: blogWrite,
+    }
+  },
   components: {
+    ListVue: ListVue,
   }
 }
 </script>
