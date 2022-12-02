@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h5>{{blogPost[0].title}}</h5>
-        <p>{{blogPost[0].date}}</p>
+        <h5>{{blogWrite[0].title}}</h5>
+        <p>{{blogWrite[0].date}}</p>
     </div>
     <div>
         <h5>블로그 글 제목</h5>
@@ -14,9 +14,8 @@
 </template>
 <script>
 export default {
-    name: 'ListVue',
     props : {
-        blogPost: Array,
+        blogWrite: Array,
     }
 }
 </script>

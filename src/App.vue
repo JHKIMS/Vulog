@@ -12,28 +12,29 @@
     </div>
   </nav>
 
-  <div class="container mt-4">
-    <h5>Front 블로그</h5>
-    <p>- Make Vue -</p>
-  </div>
 
-  <ListVue :blogPost="blog"/>
+  <router-link to="/">홈페이지</router-link>
+  <div class="mt-4">
+    <router-view :blogWrite="blogPost"></router-view>
+  </div>
+  <!-- <ListVue :blogPost="blog"/> -->
 
 </template>
 
 <script>
-import ListVue from './components/ListVue.vue'
+// import ListVue from './components/ListVue.vue'
 import blogWrite from './assets/blogWrite'
+
 
 export default {
   name: 'App',
   data(){
     return{
-      blog: blogWrite,
+      blogPost: blogWrite,
     }
   },
   components: {
-    ListVue: ListVue,
+    // ListVue: ListVue,
   }
 }
 </script>
