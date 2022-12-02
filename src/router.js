@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from "vue-router";
 import ListVue from './components/ListVue.vue'
 import HomeVue from './components/HomeVue.vue'
 import DetailVue from './components/DetailVue.vue'
+import AuthorVue from './components/AuthorVue.vue'
+import CommentVue from './components/CommentVue.vue'
 
 const routes = [
   {
@@ -15,6 +17,16 @@ const routes = [
   {
     path: "/detail/:myCustom",
     component: DetailVue,
+    children:[
+      {
+        path:"author",
+        component: AuthorVue,
+      },
+      {
+        path:"comment",
+        component: CommentVue,
+      }
+    ]
   }
 ];
 

@@ -1,4 +1,4 @@
-# vulog
+# Vulog
 
 ### npm으로 BootStrap설치
 ```
